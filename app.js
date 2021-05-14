@@ -1,10 +1,15 @@
 let cheese = 0
 let pickaxe = 0
+let pickaxePrice = 100
 let knife = 0
+let knifePrice = 40
 let miners = 0
+let minersPrice = 500
 let rover= 0
+let roverPrice = 1000
 let modifiers = 0
 let auto = 0
+let price = 0
 
 //DICTIONARIES
 
@@ -46,6 +51,7 @@ function buyCheeseKnife(){
     knife++
     cheese -= clickUpgrades.knife.price
     clickUpgrades.knife.price += 5
+    knifePrice += 5
     modifiers += clickUpgrades.knife.multiplier
   }
   console.log('bought cheese knife')
@@ -53,9 +59,11 @@ function buyCheeseKnife(){
 }
 function buyPickaxe(){
   
-  if(cheese >=100){
+  if(cheese >=clickUpgrades.pickaxe.price){
     pickaxe++
-    cheese -=100
+    cheese -= clickUpgrades.pickaxe.price
+    clickUpgrades.pickaxe.price += 5
+    pickaxePrice += 5
     modifiers += clickUpgrades.pickaxe.multiplier
   }
 
@@ -63,28 +71,28 @@ function buyPickaxe(){
   draw()
 }
 function buyMiners(){
-  if(cheese >= 500){
+  if(cheese >= automaticUpgrades.buyMiners.price){
     miners++
-    cheese -=500
+    cheese -=automaticUpgrades.buyMiners.price
+    startMinersInterval()
   }
-  startMinersInterval()
   console.log('bought miners')
   draw()
 }
 function buyRover(){
-  if(cheese >= 1000){
+  if(cheese >= automaticUpgrades.rovers.price){
     rover++
-    cheese -= 1000
+    cheese -= automaticUpgrades.rovers.price
+    startRoverInterval()
   }
   
-  startRoverInterval()
   console.log('bought rover')
   draw()
 }
-
+//Intervals
 function startMinersInterval(){
- setInterval(collectMinersUpgrades, 3000)
- console.log('started')
+  setInterval(collectMinersUpgrades, 3000)
+  console.log('started')
 }
 
 function collectMinersUpgrades(){
@@ -92,14 +100,15 @@ function collectMinersUpgrades(){
   draw()
 }
 function startRoverInterval(){
- setInterval(collectRoverUpgrades, 3000)
- console.log('started')
+  setInterval(collectRoverUpgrades, 3000)
+  console.log('started')
 }
 
 function collectRoverUpgrades(){
   cheese += automaticUpgrades.rovers.multiplier
   draw()
 }
+//
 
 function draw(){
    let cheeseElem = document.getElementById('cheese-count')
@@ -108,14 +117,26 @@ function draw(){
    let pickaxeElem = document.getElementById('buy-pickaxe')
    pickaxeElem.innerText = pickaxe
 
+   let knifePriceElem = document.getElementById('knife-price')
+   knifePriceElem.innerText = knifePrice
+
    let knifeElem = document.getElementById('buy-knife')
    knifeElem.innerText = knife
+
+   let pickaxePriceElem = document.getElementById('pickaxe-price')
+   pickaxePriceElem.innerText = pickaxePrice
 
    let minersElem = document.getElementById('buy-miners')
    minersElem.innerText = miners
 
+   let minersPriceElem = document.getElementById('miners-price')
+   minersPriceElem.innerText = minersPrice
+
    let roverElem = document.getElementById('buy-rover')
    roverElem.innerText = rover
+
+   let roverPriceElem = document.getElementById('rover-price')
+   roverPriceElem.innerText = roverPrice
 }
 
 draw()
