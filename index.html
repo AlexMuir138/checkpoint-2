@@ -15,10 +15,9 @@
 
   <header>
     <div class="container-fluid">
-      <div class="row bg-primary">
+      <div class="row bg-primary p-3">
         <div class="col-12 d-flex justify-content-center align-items-center text-light">
           <h1>Moon Miner</h1>
-
         </div>
       </div>
 
@@ -27,6 +26,47 @@
   </header>
 
   <main>
+
+    <div class="container-fluid">
+      <div class="row bg-primary p-3">
+        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+          <img class="img-fluid" onclick="mine()"
+            src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f687cb7b3919a1d26cc92ad%2F0x0.jpg%3FcropX1%3D0%26cropX2%3D5248%26cropY1%3D0%26cropY2%3D5321"
+            alt="" height="300" width="350">
+        </div>
+      </div>
+      <div class="row bg-primary p-3">
+        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+          <h1> Cheese: <span id="cheese-count">--</span></h1>
+        </div>
+      </div>
+      <div class="row bg-primary p-3">
+
+        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+
+          <div class="m-3"> Cheese x 3!</div>
+          <div class="m-3"> Cheese x 5!</div>
+          <div class="m-3"> Cheese x 10!</div>
+          <div class="m-3"> Cheese x 25!</div>
+
+        </div>
+
+      </div>
+      <div class="col-12 d-flex justify-content-center align-items-center text-light">
+        <div>
+          <button class="btn btn-info m-3" onclick="buyCheeseKnife()">Cheese Knife! <span
+              id="buy-knife">--</span></button>
+        </div>
+
+        <button class="btn btn-info m-3" onclick="buyPickaxe()">Pickaxe! <span id="buy-pickaxe">--</span></button>
+
+        <button class="btn btn-info m-3" onclick="buyMiners()">Miners! <span id="buy-miners">--</span></button>
+
+        <button class="btn btn-info m-3" onclick="buyRover()">Rover! <span id="buy-rover">--</span></button>
+      </div>
+
+    </div>
+
 
   </main>
 
