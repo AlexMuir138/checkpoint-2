@@ -2,7 +2,7 @@ let cheese = 0
 let pickaxe = 0
 let pickaxePrice = 100
 let knife = 0
-let knifePrice = 40
+let knifePrice = 50
 let miners = 0
 let minersPrice = 500
 let rover= 0
@@ -15,7 +15,7 @@ let price = 0
 
 let clickUpgrades = {
   knife:{
-    price: 40,
+    price: 50,
     quantity: 0,
     multiplier: 3
   },
@@ -50,8 +50,8 @@ function buyCheeseKnife(){
   if(cheese >= clickUpgrades.knife.price){
     knife++
     cheese -= clickUpgrades.knife.price
-    clickUpgrades.knife.price += 5
-    knifePrice += 5
+    clickUpgrades.knife.price += 10
+    knifePrice += 10
     modifiers += clickUpgrades.knife.multiplier
   }
   console.log('bought cheese knife')
@@ -62,8 +62,8 @@ function buyPickaxe(){
   if(cheese >=clickUpgrades.pickaxe.price){
     pickaxe++
     cheese -= clickUpgrades.pickaxe.price
-    clickUpgrades.pickaxe.price += 5
-    pickaxePrice += 5
+    clickUpgrades.pickaxe.price += 25
+    pickaxePrice += 25
     modifiers += clickUpgrades.pickaxe.multiplier
   }
 
@@ -71,9 +71,11 @@ function buyPickaxe(){
   draw()
 }
 function buyMiners(){
-  if(cheese >= automaticUpgrades.buyMiners.price){
+  if(cheese >= automaticUpgrades.miners.price){
     miners++
-    cheese -=automaticUpgrades.buyMiners.price
+    cheese -=automaticUpgrades.miners.price
+    automaticUpgrades.miners.price += 50
+    minersPrice += 50
     startMinersInterval()
   }
   console.log('bought miners')
@@ -83,6 +85,8 @@ function buyRover(){
   if(cheese >= automaticUpgrades.rovers.price){
     rover++
     cheese -= automaticUpgrades.rovers.price
+    automaticUpgrades.rovers.price +=  100
+    roverPrice += 100
     startRoverInterval()
   }
   

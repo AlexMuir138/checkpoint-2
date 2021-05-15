@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,8 +16,8 @@
 
   <header>
     <div class="container-fluid">
-      <div class="row bg-primary p-3">
-        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+      <div class="row p-3">
+        <div class="col-12 d-flex justify-content-center align-items-center text-warning">
           <h1>Moon Miner</h1>
         </div>
       </div>
@@ -26,58 +27,82 @@
   </header>
 
   <main>
-
+    
     <div class="container-fluid">
-      <div class="row bg-primary p-3">
-        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+
+      <div class="row p-3">
+        <div class="col-12 d-flex justify-content-center align-items-center text-warning">
+          <div>Click here! --> </div>
           <img class="img-fluid" onclick="mine()"
-            src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f687cb7b3919a1d26cc92ad%2F0x0.jpg%3FcropX1%3D0%26cropX2%3D5248%26cropY1%3D0%26cropY2%3D5321"
-            alt="" height="300" width="350">
+          src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f687cb7b3919a1d26cc92ad%2F0x0.jpg%3FcropX1%3D0%26cropX2%3D5248%26cropY1%3D0%26cropY2%3D5321"
+          alt="" height="300" width="350">
+          <div>
+            <--Click Here! </div>
+              
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row bg-primary p-3">
-        <div class="col-12 d-flex justify-content-center align-items-center text-light">
-          <h1> Cheese: <span id="cheese-count">--</span></h1>
-        </div>
-      </div>
-      <div class="row bg-primary p-3">
 
-        <div class="col-12 d-flex justify-content-center align-items-center text-light">
+        <div class="container-fluid">
 
-          <div class="m-3"> Cheese x 3!</div>
+          <div class="row d-flex justify-content-center align-items-center text-warning p-3">
 
-          <div id="knife-price">--</div>
+            <h1> Cheese Collected : </h1>
+          </div>
 
-          <div class="m-3"> Cheese x 5!</div>
+          <div class="row d-flex justify-content-center align-items-center text-warning p-3">
+            <h1><span id="cheese-count">--</span></h1>
 
-          <div id="pickaxe-price">--</div>
-
-          <div class="m-3"> Cheese x 10!</div>
-
-          <div id="miners-price">--</div>
-
-          <div class="m-3"> Cheese x 25!</div>
-
-          <div id="rover-price">--</div>
-
+          </div>
 
         </div>
 
-      </div>
-      <div class="col-12 d-flex justify-content-center align-items-center text-light">
-        <div>
-          <button class="btn btn-info m-3" onclick="buyCheeseKnife()">Cheese Knife! <span
-              id="buy-knife">--</span></button>
-        </div>
+        <div class="container-fluid">
 
-        <button class="btn btn-info m-3" onclick="buyPickaxe()">Pickaxe! <span id="buy-pickaxe">--</span></button>
-
-        <button class="btn btn-info m-3" onclick="buyMiners()">Miners! <span id="buy-miners">--</span></button>
-
-        <button class="btn btn-info m-3" onclick="buyRover()">Rover! <span id="buy-rover">--</span></button>
-      </div>
-
-    </div>
+          <div class="row d-flex flex-direction-column p-3">
+            
+            <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
+              
+              <div class="m-3">Increase Cheese x 3</div>
+              <div class="text-success">$<span id="knife-price">--</span></div>
+              
+              <div>
+                <button class="btn btn-info m-3" onclick="buyCheeseKnife()">Cheese Knife! <span id="buy-knife">--</span></button>
+                </div>
+                
+              </div>
+              
+              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
+                
+                <div class="m-3"> Cheese x 5!</div>
+                <div class="text-success">$<span id="pickaxe-price">--</span></div>
+                
+                <button class="btn btn-info m-3" onclick="buyPickaxe()">Pickaxe! <span id="buy-pickaxe">--</span></button>
+                
+                
+              </div>
+              
+              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
+                
+                <div class="m-3"> Cheese x 10!</div>
+                <div class="text-success">$<span id="miners-price">--</span></div>
+                
+                <button class="btn btn-info m-3" onclick="buyMiners()">Miners! <span id="buy-miners">--</span></button>
+              </div>
+              
+              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
+                
+                <div class="m-3"> Cheese x 25!</div>
+                <div class="text-success">$<span id="rover-price"></span></div>
+                
+                <button class="btn btn-info m-3" onclick="buyRover()">Rover! <span id="buy-rover">--</span></button>
+                
+                
+              </div>
+            </div>
+            
+          </div>
 
 
   </main>

@@ -1,5 +1,7 @@
+
 body{
-  background-color: var(--primary);
+  background-color: #010205;
+  font-family: 'Goblin One', cursive;
 }
 hidden{
   background-color: azure;
