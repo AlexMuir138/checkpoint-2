@@ -19,7 +19,7 @@
     <div class="container-fluid">
       <div class="row p-3">
         <div class="col-12 d-flex justify-content-center align-items-center text-warning">
-          <h1>Moon Miner</h1>
+          <h1><u>Moon Miner</u></h1>
         </div>
       </div>
 
@@ -28,82 +28,106 @@
   </header>
 
   <main>
-    
+
     <div class="container-fluid">
 
-      <div class="row p-3">
-        <div class="col-12 d-flex justify-content-center align-items-center text-warning">
+      <div class="row p-0">
+        <div class="col-2 flex-column">
+          <div class="card hidden"> Hurray! You just wasted so much of your time!</div>
+        </div>
+
+        <div class="col-8 d-flex justify-content-center align-items-center text-warning">
           <div>Click here! --> </div>
           <img class="img-fluid" onclick="mine()"
-          src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f687cb7b3919a1d26cc92ad%2F0x0.jpg%3FcropX1%3D0%26cropX2%3D5248%26cropY1%3D0%26cropY2%3D5321"
-          alt="" height="300" width="350">
+            src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f687cb7b3919a1d26cc92ad%2F0x0.jpg%3FcropX1%3D0%26cropX2%3D5248%26cropY1%3D0%26cropY2%3D5321"
+            alt="" height="290" width="350">
           <div>
-            <--Click Here! </div>
-              
-            </div>
+            <-- Click Here! </div>
           </div>
         </div>
       </div>
+    </div>
 
-        <div class="container-fluid">
-
-          <div class="row d-flex justify-content-center align-items-center text-warning p-3">
-
-            <h1> Cheese Collected : </h1>
+    <div class="container-fluid hidden" id="seriously">
+      <div class="row">
+        <div class="col-12">
+          <div class="text-danger d-flex justify-content-center">
+            Dude, seriously. Go outside.
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="row d-flex justify-content-center align-items-center text-warning p-3">
-            <h1><span id="cheese-count">--</span></h1>
+    <div class="container-fluid">
 
+      <div class="row d-flex justify-content-center align-items-center text-warning p-3">
+        <h1>
+          <i class="mdi mdi-cheese"></i>
+          Cheese Collected
+          <i class="mdi mdi-cheese"></i>
+        </h1>
+      </div>
+
+      <div class="row d-flex justify-content-center align-items-center text-warning p-3">
+        <h1>
+          <i class="mdi mdi-cheese"></i>
+          <span id="cheese-count">--</span>
+        </h1>
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row d-flex p-3">
+
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center flex-column text-warning">
+
+          <div class="text-warning"><i class="mdi mdi-cheese"></i><span id="knife-price">--</span></div>
+
+          <div>
+            <button class="btn btn-primary m-3" onclick="buyCheeseKnife()">Cheese Knife! <span
+                id="buy-knife">--</span></button>
           </div>
+          <i class="mdi mdi-knife"></i>
+          <div class="m-3">(+ <i class="mdi mdi-cheese"></i>3 per click)</div>
 
         </div>
 
-        <div class="container-fluid">
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center flex-column text-warning">
 
-          <div class="row d-flex flex-direction-column p-3">
-            
-            <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
-              
-              <div class="text-success">$<span id="knife-price">--</span></div>
-              
-              <div>
-                <button class="btn btn-info m-3" onclick="buyCheeseKnife()">Cheese Knife! <span id="buy-knife">--</span></button>
-              </div>
-              <div class="m-3">(Cheese x 3)</div>
-                
-              </div>
-              
-              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
-                
-                <div class="text-success">$<span id="pickaxe-price">--</span></div>
-                <button class="btn btn-info m-3" onclick="buyPickaxe()">Pickaxe! <span id="buy-pickaxe">--</span></button>
-                <div class="m-3"> (Cheese x 5)</div>
-                
-                
-                
-              </div>
-              
-              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
-                
-                <div class="text-success">$<span id="miners-price">--</span></div>
-                
-                <button class="btn btn-info m-3" onclick="buyMiners()">Miners! <span id="buy-miners">--</span></button>
-                <div class="m-3"> (Cheese x 10)</div>
-              </div>
-              
-              <div class="col-3 d-flex justify-content-center align-items-center flex-column text-warning">
-                
-                <div class="text-success">$<span id="rover-price"></span></div>
-                
-                <button class="btn btn-info m-3" onclick="buyRover()">Rover! <span id="buy-rover">--</span></button>
-                <div class="m-3"> (Cheese x 25)</div>
-                
-                
-              </div>
-            </div>
-            
-          </div>
+          <div class="text-warning"><i class="mdi mdi-cheese"></i><span id="pickaxe-price">--</span></div>
+          <button class="btn btn-primary m-3" onclick="buyPickaxe()">Pickaxe! <span id="buy-pickaxe">--</span></button>
+          <i class="mdi mdi-pickaxe"></i>
+          <div class="m-3"> (+ <i class="mdi mdi-cheese"></i>5 per click)</div>
+
+
+
+        </div>
+
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center flex-column text-warning">
+
+          <div class="text-warning"><i class="mdi mdi-cheese"></i><span id="miners-price">--</span></div>
+
+          <button class="btn btn-primary m-3" onclick="buyMiners()">Miners! <span id="buy-miners">--</span></button>
+          <i class="mdi mdi-minecraft"></i>
+          <div class="m-3"> (+ <i class="mdi mdi-cheese"></i>10 per second)</div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12 d-flex justify-content-center align-items-center flex-column text-warning">
+
+          <div class="text-warning"><i class="mdi mdi-cheese"></i><span id="rover-price"></span></div>
+
+          <button class="btn btn-primary m-3" onclick="buyRover()">Rover! <span id="buy-rover">--</span></button>
+          <i class="mdi mdi-car-estate"></i>
+          <div class="m-3"> (+ <i class="mdi mdi-cheese"></i>25 per second)</div>
+
+
+        </div>
+      </div>
+
+    </div>
 
 
   </main>

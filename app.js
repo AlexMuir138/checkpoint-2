@@ -44,6 +44,7 @@ function mine(){
   cheese += modifiers
   console.log('wired up')
   draw()
+  goOutside()
 }
 
 function buyCheeseKnife(){
@@ -93,6 +94,16 @@ function buyRover(){
   console.log('bought rover')
   draw()
 }
+
+// TROPHIES
+function goOutside(){
+ if(cheese >= 10000){
+   document.getElementById('seriously').classList.remove('hidden')
+   console.log('go outside')
+ }
+  
+}
+
 //Intervals
 function startMinersInterval(){
   setInterval(collectMinersUpgrades, 3000)

@@ -3,6 +3,6 @@ body{
   background-color: #010205;
   font-family: 'Goblin One', cursive;
 }
-hidden{
-  background-color: azure;
+.hidden{
+  display: none;
 }
